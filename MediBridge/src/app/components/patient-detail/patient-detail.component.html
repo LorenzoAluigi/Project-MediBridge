@@ -1,0 +1,427 @@
+<div class="px-4">
+  <div class="px-4">
+    <div class="grid grid-cols-1 mb-4 min-w-full">
+      <h3 class="p-4 sm:p-6 text-xl font-semibold dark:text-white">
+        Informazioni generali
+      </h3>
+      <div
+        class="p-4 mb-4 2xl:col-span-2 sm:p-6 bg-white rounded-lg shadow-lg dark:bg-blue-950"
+      >
+        <div
+          class="grid grid-cols-6 gap-3"
+          *ngIf="Patient !== null && Patient !== undefined"
+        >
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-slate-200"
+                  >Nome:</span
+                >
+                {{ Patient.FirstName }}
+              </p>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-white"
+                  >Cognome:</span
+                >
+                {{ Patient.LastName }}
+              </p>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-white"
+                  >Genere:</span
+                >
+                {{ Patient.Gender }}
+              </p>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-white"
+                  >Data di nascita:</span
+                >
+                {{ Patient.DateOfBirth | date : "dd/MM/YYYY" }}
+              </p>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-white"
+                  >Codice Fiscale:</span
+                >
+                {{ Patient.CF }}
+              </p>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-white"
+                  >Indirizzo:</span
+                >
+                {{ Patient.Address }}
+              </p>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-white"
+                  >Indirizzo:</span
+                >
+                {{ Patient.Address }}
+              </p>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-white"
+                  >Provincia:</span
+                >
+                {{ Patient.Province }}
+              </p>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-white"
+                  >Stato:</span
+                >
+                {{ Patient.Country }}
+              </p>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <div class="py-3 border-b border-slate-500">
+              <p class="text-sm text-black dark:text-white">
+                <span
+                  class="me-3 text-sm font-bold text-primary dark:text-white"
+                  >E-mail:</span
+                >
+                {{ Patient.Email }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-6 sm:col-full"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--start grid col 2 layout-->
+    <div class="grid lg:grid-cols-2 gap-4 mb-4 pb-2">
+      <!-- medical condition section -->
+      <div class="w-100 h-full">
+        <div class="">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4"
+          >
+            <div
+              class="md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0"
+            >
+              <h3 class="mb-4 text-xl font-semibold dark:text-white">
+                Patologie
+              </h3>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto relative shadow-lg rounded-md">
+            <table
+              class="text-sm text-left bg-white dark:bg-blue-950 text-gray-900 dark:text-white w-full"
+            >
+              <thead
+                class="text-xs text-white uppercase bg-primary dark:bg-blue-800 dark:text-white"
+              >
+                <tr>
+                  <th scope="col" class="px-4 py-4">year</th>
+                  <th scope="col" class="px-4 py-4">description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  *ngFor="let m of MedicalConditions"
+                  class="border-b dark:border-gray-700"
+                >
+                  <th
+                    scope="row"
+                    class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    {{ m.DiagnosisYear }}
+                  </th>
+                  <td class="px-4 py-3">
+                    {{ m.Description }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- therapeutic plan section -->
+      <div class="w-100 h-full">
+        <div class="">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4"
+          >
+            <div
+              class="md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0"
+            >
+              <h3 class="mb-4 text-xl font-semibold dark:text-white">
+                Piani Terapeutici
+              </h3>
+            </div>
+          </div>
+          <div class="overflow-x-auto relative shadow-lg rounded-md">
+            <table
+              class="text-sm text-left bg-white dark:bg-blue-950 text-gray-900 dark:text-white w-full"
+            >
+              <thead
+                class="text-xs text-white uppercase bg-primary dark:bg-blue-800 dark:text-white"
+              >
+                <tr>
+                  <th scope="col" class="px-4 py-4">Plan Description</th>
+                  <th scope="col" class="px-4 py-3">Start Date</th>
+                  <th scope="col" class="px-4 py-3">Expry date</th>
+                  <th scope="col" class="px-4 py-3">MedicalCondition</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="border-b dark:border-gray-700"
+                  *ngFor="let t of TherapeuticPlans"
+                >
+                  <th
+                    scope="row"
+                    class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    {{ t.PlanDescription }}
+                  </th>
+                  <td class="px-4 py-3">
+                    {{ t.StartDate | date : "dd/MM/yyyy" }}
+                  </td>
+                  <td class="px-4 py-3">
+                    {{ t.ExpiryDate | date : "dd/MM/yyyy" }}
+                  </td>
+                  <td class="px-4 py-3 max-w-[12rem] truncate">
+                    {{ t.MedicalConditionId }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- End block -->
+    </div>
+    <!-- end grid col 2 layout-->
+    <!-- drugs section -->
+
+    <div class="grid grid-cols-1 mb-4 min-w-full">
+      <div class="w-100">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4"
+        >
+          <div
+            class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0"
+          >
+            <h3 class="mb-4 text-xl font-semibold dark:text-white">
+              Terapie in corso
+            </h3>
+            <div class="flex items-center space-x-3 w-full md:w-auto"></div>
+          </div>
+        </div>
+        <div class="overflow-x-auto shadow-lg rounded-md">
+          <table
+            class="w-full text-sm text-left text-gray-900 dark:text-white dark:bg-blue-950"
+          >
+            <thead
+              class="text-xs text-white uppercase bg-primary dark:bg-blue-800 dark:text-white"
+            >
+              <tr>
+                <th scope="col" class="px-4 py-4">Medication Name</th>
+                <th scope="col" class="px-4 py-3">daily dosage</th>
+                <th scope="col" class="px-4 py-3">medical condition</th>
+                <th scope="col" class="px-4 py-3">therapeutic plan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="border-b dark:border-gray-700"
+                *ngFor="let m of medications"
+              >
+                <th
+                  scope="row"
+                  class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  {{ m.MedicationName }}
+                </th>
+                <td class="px-4 py-3">{{ m.DailyDosage }}</td>
+                <td class="px-4 py-3">{{ m.MedicalConditionId }}</td>
+
+                <td class="px-4 py-3">{{ m.PlanId }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 mt-8 min-w-full">
+      <div class="w-100">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4"
+        >
+          <div
+            class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0"
+          >
+            <h3 class="mb-4 text-xl font-semibold dark:text-white">Referti</h3>
+          </div>
+          <div class="w-full md:w-1/2">
+            <form class="flex items-center">
+              <label for="simple-search" class="sr-only">Search</label>
+              <div class="relative w-full">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewbox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="simple-search"
+                  class="bg-slate-300 border border-gray-300 text-gray-950 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:border-gray-600 te dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Search"
+                  required=""
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="overflow-x-auto shadow-lg rounded-md">
+          <table
+            class="text-sm text-left bg-white dark:bg-blue-950 text-gray-900 dark:text-white w-full"
+          >
+            <thead
+              class="text-xs text-white uppercase bg-primary dark:bg-blue-800 dark:text-white"
+            >
+              <tr>
+                <th scope="col" class="px-4 py-4">date</th>
+                <th scope="col" class="px-4 py-3">type</th>
+                <th scope="col" class="px-4 py-3">Description</th>
+                <th scope="col" class="px-4 py-3">file</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="border-b dark:border-gray-700"
+                *ngFor="let r of reports"
+              >
+                <th
+                  scope="row"
+                  class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  {{ r.reportDate | date : "dd/MM/yyyy" }}
+                </th>
+                <td class="px-4 py-3">{{ r.reportTypeId }}</td>
+                <td class="px-4 py-3">{{ r.description }}</td>
+                <td class="px-4 py-3 max-w-[12rem] truncate">
+                  <button
+                    (click)="getFile(r.fileName)"
+                    data-modal-target="default-modal"
+                    data-modal-toggle="default-modal"
+                  >
+                    {{ r.fileName }}
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!--end block-->
+  </div>
+</div>
+
+<div
+  id="default-modal"
+  tabindex="-1"
+  aria-hidden="true"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+>
+  <div class="relative p-4 w-full max-w-4xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <!-- Modal header -->
+      <button
+        type="button"
+        class="text-black bg-transparent fixed top-19 right-12 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+        data-modal-hide="default-modal"
+      >
+        <svg
+          class="w-3 h-3"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+          />
+        </svg>
+        <span class="sr-only">Close modal</span>
+      </button>
+
+      <!-- Modal body -->
+      <div
+        class="p-4 md:p-5 space-y-4"
+        *ngIf="fileSelected !== null && fileSelected !== undefined"
+      >
+        <ngx-extended-pdf-viewer
+          [base64Src]="fileSelected"
+          [useBrowserLocale]="true"
+          [height]="'auto'"
+          [textLayer]="true"
+        >
+          >
+        </ngx-extended-pdf-viewer>
+      </div>
+    </div>
+  </div>
+</div>

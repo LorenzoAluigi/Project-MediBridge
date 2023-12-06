@@ -1,0 +1,20 @@
+<div class="flex flex-col md:flex-row">
+  <div>
+    <app-sidebar
+      (logout)="logout()"
+      (userSettings)="toggleUserSettings()"
+      (dasboard)="toggleDashboard()"
+    ></app-sidebar>
+  </div>
+  <div class="flex-grow md:w-auto">
+    <app-patient-list
+      *ngIf="showPatientsList"
+      (PatientDetailEmitter)="handlePatientDetail($event)"
+    ></app-patient-list>
+    <app-patient-detail
+      *ngIf="showPatientDetail"
+      [patientId]="selectedPatientId"
+    ></app-patient-detail>
+    <app-user-settings *ngIf="showUserSettings"></app-user-settings>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="flex flex-col md:flex-row">
+  <div>
+    <app-sidebar
+      (reportListEmitter)="toggleReportList()"
+      (dasboard)="toggleDashboard()"
+      (userSettings)="toggleUserSettings()"
+      (searchDoctor)="toggleSearchDoctor()"
+      (logout)="logout()"
+    ></app-sidebar>
+  </div>
+  <div class="flex-grow md:w-auto">
+    <app-dashboard-home-user *ngIf="showDashboard"></app-dashboard-home-user>
+    <app-report-list *ngIf="showReportList"></app-report-list>
+    <app-user-settings *ngIf="showUserSettings"></app-user-settings>
+    <app-search-doctor *ngIf="showSearchDoctor"></app-search-doctor>
+  </div>
+</div>
