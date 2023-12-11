@@ -60,7 +60,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 -
 - [![Angular][Angular.io]][Angular-url]
-- [![ASP.NET MVC](https://img.shields.io/badge/ASP.NET_MVC-v5.2.7-5C2D91.svg?logo=aspdotnet&style=for-the-badge&labelColor=5C2D91&logoColor=white)](https://www.asp.net/mvc)
+- [![ASP.NET MVC](https://img.shields.io/badge/ASP.NET_MVC-v5.2.7-6DB33F.svg?logo=aspdotnet&style=for-the-badge&labelColor=6DB33F&logoColor=white)](https://www.asp.net/mvc)
+
 - [![Laravel][Laravel.com]][Laravel-url]
 - [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 - [![JQuery][JQuery.com]][JQuery-url]
