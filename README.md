@@ -56,15 +56,14 @@ MediBridge is a comprehensive health management platform designed to empower use
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
--
-- [![Angular][Angular.io]][Angular-url]
-- [![ASP.NET MVC](https://img.shields.io/badge/ASP.NET_MVC-v5.2.7-6DB33F.svg?style=for-the-badge&labelColor=6DB33F)](https://www.asp.net/mvc)
-  [<img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg" height="20">](https://www.asp.net/mvc)
-- [![Laravel][Laravel.com]][Laravel-url]
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-- [![JQuery][JQuery.com]][JQuery-url]
+- [![Angular](https://img.shields.io/badge/Angular-12-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+- [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v2.2.19-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+- [![Flowbite](https://img.shields.io/badge/Flowbite-Your_Color_Here-1E415E?style=for-the-badge)](https://flowbite.com/)
+- [![ngx-extended-pdf-viewer](https://img.shields.io/badge/ngx--extended--pdf--viewer-5.1.7-3498DB?style=for-the-badge&logo=pdf&logoColor=white)](https://github.com/stephanrauh/ngx-extended-pdf-viewer)
+- [![ASP.NET MVC](https://img.shields.io/badge/ASP.NET_MVC-v5.2.7-5C2D91.svg?logo=aspdotnet&style=for-the-badge&labelColor=5C2D91&logoColor=white)](https://www.asp.net/mvc)
+- [![Entity Framework](https://img.shields.io/badge/Entity_Framework-Core-512BD4?style=for-the-badge&logo=.net&logoColor=white)](https://docs.microsoft.com/en-us/ef/core/)
+- [![JWT](https://img.shields.io/badge/JSON_Web_Token-Your_Color_Here-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)](https://jwt.io/)
+- [![Bcrypt](https://img.shields.io/badge/Bcrypt-Your_Color_Here-2A7284?style=for-the-badge)](https://en.wikipedia.org/wiki/Bcrypt)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -198,7 +197,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: ./MediBridge/src/assets/img/dashboard.jpg
-[ASP.NET.io]: https://img.shields.io/badge/ASP.NET-000000?style=for-the-badge&logo=ASP.NET&logoColor=white
+[ASP.NET]: https://img.shields.io/badge/ASP.NET-000000?style=for-the-badge&logo=ASP.NET&logoColor=white
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
