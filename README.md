@@ -60,7 +60,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 -
 - [![Angular][Angular.io]][Angular-url]
-- [![ASP.NET][Svelte.dev]][Svelte-url]
+- [![ASP.NET.io][Svelte.dev]][Svelte-url]
 - [![Laravel][Laravel.com]][Laravel-url]
 - [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 - [![JQuery][JQuery.com]][JQuery-url]
@@ -197,7 +197,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: ./MediBridge/src/assets/img/dashboard.jpg
-[ASP.NET]: https://img.shields.io/badge/ASP.NET-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[ASP.NET.io]: https://img.shields.io/badge/ASP.NET-000000?style=for-the-badge&logo=ASP.NET&logoColor=white
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
